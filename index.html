@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pablo Murad - RunawayDevil</title>
+  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
-      background: #181818;
-      color: #00ff99;
+      background: linear-gradient(135deg, #18182a 0%, #2d004d 100%);
+      color: #00fff7;
       font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 0;
@@ -15,67 +16,169 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
+    }
+    .avatar {
+      margin-top: 2.5rem;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #ff00c8;
+      box-shadow: 0 0 40px #00fff7, 0 0 80px #ff00c8 inset;
+      object-fit: cover;
+      background: #18182a;
+      display: block;
     }
     .retro-box {
-      border: 3px solid #00ff99;
-      box-shadow: 0 0 20px #00ff99, 0 0 40px #222 inset;
-      background: #222;
+      border: 3px solid #00fff7;
+      box-shadow: 0 0 20px #00fff7, 0 0 40px #222 inset;
+      background: rgba(34, 0, 51, 0.95);
       padding: 2rem 3rem;
-      border-radius: 12px;
+      border-radius: 16px;
       text-align: center;
-      margin-bottom: 2rem;
+      margin: 2rem 0 2rem 0;
+      max-width: 480px;
     }
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.3rem;
       margin-bottom: 0.5rem;
       letter-spacing: 2px;
-      text-shadow: 0 0 8px #00ff99;
+      color: #ff00c8;
+      text-shadow: 0 0 8px #00fff7;
     }
     h2 {
-      font-size: 1.3rem;
+      font-size: 1.1rem;
       margin-bottom: 1.5rem;
       color: #fff;
-      text-shadow: 0 0 4px #00ff99;
+      text-shadow: 0 0 4px #00fff7;
     }
-    a.github-link {
-      color: #00ff99;
+    .links {
+      margin: 1.5rem 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .links a {
+      color: #00fff7;
       text-decoration: none;
       font-weight: bold;
       font-size: 1.1rem;
-      border-bottom: 1px dashed #00ff99;
+      border-bottom: 1px dashed #ff00c8;
       transition: color 0.2s;
+      display: inline-block;
     }
-    a.github-link:hover {
-      color: #fff;
+    .links a:hover {
+      color: #ff00c8;
     }
-    .soon {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      color: #fff;
-      text-shadow: 0 0 6px #00ff99;
+    .gifs {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0 1rem 0;
+      flex-wrap: wrap;
+    }
+    .gifs img {
+      max-width: 120px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px #00fff7;
+      background: #18182a;
+    }
+    .repos {
+      margin: 2.5rem 0 1.5rem 0;
+      max-width: 600px;
+      background: rgba(34, 0, 51, 0.85);
+      border: 2px solid #ff00c8;
+      border-radius: 14px;
+      box-shadow: 0 0 16px #ff00c8;
+      padding: 1.5rem 2rem;
+    }
+    .repos h3 {
+      color: #00fff7;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
       letter-spacing: 1px;
-      animation: blink 1.2s steps(2, start) infinite;
     }
-    @keyframes blink {
-      to { visibility: hidden; }
+    .repo-item {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed #00fff7;
+    }
+    .repo-item:last-child {
+      border-bottom: none;
+    }
+    .repo-title {
+      color: #ff00c8;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-shadow: 0 0 4px #00fff7;
+    }
+    .repo-desc {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0.2rem 0 0.4rem 0;
+    }
+    .repo-link {
+      color: #00fff7;
+      font-size: 0.98rem;
+      text-decoration: underline;
+    }
+    .repo-link:hover {
+      color: #ff00c8;
     }
     .footer {
-      margin-top: 3rem;
-      color: #00ff99;
+      margin: 2.5rem 0 1rem 0;
+      color: #00fff7;
       font-size: 1rem;
       opacity: 0.7;
       letter-spacing: 2px;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .retro-box, .repos {
+        padding: 1rem 0.5rem;
+        max-width: 98vw;
+      }
+      .gifs img {
+        max-width: 80px;
+      }
     }
   </style>
 </head>
 <body>
+  <img src="skullzinho.png" alt="Avatar" class="avatar">
   <div class="retro-box">
     <h1>Pablo Murad</h1>
-    <h2>Especialista em Segurança da Informação & Finanças</h2>
-    <a class="github-link" href="https://github.com/runawaydevil" target="_blank">github.com/runawaydevil</a>
-    <div class="soon">Em breve</div>
+    <h2>Cybersecurity & Finance Specialist</h2>
+    <div class="links">
+      <a href="https://pablo.space" target="_blank">🌐 Website</a>
+      <a href="https://instagram.com/murad.pablo" target="_blank">📸 Instagram</a>
+      <a href="https://www.linkedin.com/in/pablomurad/" target="_blank">💼 LinkedIn</a>
+      <a href="mailto:runawaydev1l@pm.me">✉️ runawaydev1l@pm.me</a>
+    </div>
+    <div class="gifs">
+      <img src="macaco.gif" alt="Gif 1">
+      <img src="meio.gif" alt="Gif 2">
+      <img src="rodapé.gif" alt="Gif 3">
+    </div>
   </div>
-  <div class="footer">2025</div>
+  <div class="repos">
+    <h3>Highlighted Public Repositories</h3>
+    <div class="repo-item">
+      <div class="repo-title">PrivateChess</div>
+      <div class="repo-desc">An anonymous, secure, and privacy-focused online chess game for two players. Real-time, anti-cheat, multilingual, and mobile-first. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/privatechess" target="_blank">View on GitHub</a>
+    </div>
+    <div class="repo-item">
+      <div class="repo-title">Sudoku</div>
+      <div class="repo-desc">A web-based Sudoku game. Play, solve, and challenge yourself online. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/sudoku" target="_blank">View on GitHub</a>
+    </div>
+    <div class="repo-item">
+      <div class="repo-title">dsize (dzip)</div>
+      <div class="repo-desc">Online file compressor and decompressor. Simple, fast, and privacy-friendly. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/dsize" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+  <div class="footer">&copy; 2025 Pablo Murad (RunawayDevil) • All rights reserved</div>
 </body>
 </html> 
