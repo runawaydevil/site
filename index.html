@@ -90,11 +90,18 @@
       font-weight: bold;
       font-size: 1.1rem;
       border-bottom: 1px dashed #ff00c8;
-      transition: color 0.2s;
+      transition: color 0.2s, transform 0.2s;
       display: inline-block;
+      padding: 0.3rem 0;
+      min-height: 44px; /* Touch target size */
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    .links a:hover {
+    .links a:hover,
+    .links a:active {
       color: #ff00c8;
+      transform: scale(1.05);
     }
     .gifs {
       display: flex;
@@ -152,9 +159,15 @@
       color: #00fff7;
       font-size: 0.98rem;
       text-decoration: underline;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+      padding: 0.2rem 0;
+      min-height: 32px;
     }
-    .repo-link:hover {
+    .repo-link:hover,
+    .repo-link:active {
       color: #ff00c8;
+      transform: scale(1.02);
     }
     .footer {
       margin: 2.5rem 0 1rem 0;
@@ -164,13 +177,145 @@
       letter-spacing: 2px;
       text-align: center;
     }
-    @media (max-width: 600px) {
-      .retro-box, .repos {
-        padding: 1rem 0.5rem;
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .avatar {
+        width: 140px;
+        height: 140px;
+        margin-top: 1.5rem;
+      }
+      
+      .retro-box {
+        padding: 1.5rem 1rem;
+        max-width: 95vw;
+        margin: 1rem 0;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+      }
+      
+      h2 {
+        font-size: 1rem;
+      }
+      
+      .links a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+      }
+      
+      .gifs {
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      
+      .gifs img {
+        max-width: 70px;
+      }
+      
+      .repos {
+        padding: 1rem;
+        max-width: 95vw;
+        margin: 1.5rem 0;
+      }
+      
+      .repos h3 {
+        font-size: 1.1rem;
+      }
+      
+      .repo-title {
+        font-size: 1rem;
+      }
+      
+      .repo-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      
+      .footer {
+        font-size: 0.9rem;
+        margin: 1.5rem 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .avatar {
+        width: 120px;
+        height: 120px;
+        margin-top: 1rem;
+      }
+      
+      .retro-box {
+        padding: 1rem 0.8rem;
         max-width: 98vw;
       }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 0.9rem;
+      }
+      
+      .links {
+        gap: 0.5rem;
+      }
+      
+      .links a {
+        font-size: 0.9rem;
+      }
+      
+      .gifs {
+        gap: 0.8rem;
+      }
+      
       .gifs img {
-        max-width: 80px;
+        max-width: 60px;
+      }
+      
+      .repos {
+        padding: 0.8rem;
+      }
+      
+      .repo-title {
+        font-size: 0.95rem;
+      }
+      
+      .repo-desc {
+        font-size: 0.85rem;
+      }
+      
+      .repo-link {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .retro-box {
+        padding: 0.8rem 0.6rem;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      h2 {
+        font-size: 0.8rem;
+      }
+      
+      .gifs img {
+        max-width: 50px;
+      }
+      
+      .repos {
+        padding: 0.6rem;
       }
     }
   </style>
