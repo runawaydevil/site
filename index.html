@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Pablo Murad - Cybersecurity & Finance Specialist | RunawayDevil</title>
+  <meta name="description" content="Pablo Murad - Especialista em Cybersecurity e Finanças. Desenvolvedor de projetos como PrivateChess, Sudoku e dsize. Portfolio profissional.">
+  <meta name="keywords" content="cybersecurity, finance, developer, pablo murad, runawaydevil, chess, sudoku, file compression">
+  <meta name="author" content="Pablo Murad">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://runawaydevil.github.io/">
+  <meta property="og:title" content="Pablo Murad - Cybersecurity & Finance Specialist">
+  <meta property="og:description" content="Especialista em Cybersecurity e Finanças. Desenvolvedor de projetos inovadores.">
+  <meta property="og:image" content="https://iili.io/FEr0Dvf.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://runawaydevil.github.io/">
+  <meta property="twitter:title" content="Pablo Murad - Cybersecurity & Finance Specialist">
+  <meta property="twitter:description" content="Especialista em Cybersecurity e Finanças. Desenvolvedor de projetos inovadores.">
+  <meta property="twitter:image" content="https://iili.io/FEr0Dvf.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Ctext y='58' font-size='60'%3E%F0%9F%92%80%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="public/favicon.png">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://iili.io/FEr0Dvf.png" as="image">
+  
+  <style>
+    body {
+      background: linear-gradient(135deg, #18182a 0%, #2d004d 100%);
+      color: #00fff7;
+      font-family: 'Courier New', Courier, monospace;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+      overflow-x: hidden;
+    }
+    
+    /* Retro scanlines effect */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 247, 0.03) 2px,
+        rgba(0, 255, 247, 0.03) 4px
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* CRT flicker effect */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.1) 100%);
+      pointer-events: none;
+      z-index: 2;
+      animation: flicker 0.15s infinite;
+    }
+    
+    @keyframes flicker {
+      0%, 100% { opacity: 0.1; }
+      50% { opacity: 0.05; }
+    }
+    
+    /* Matrix rain effect */
+    .matrix-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.1;
+    }
+    
+    .matrix-bg::before {
+      content: '01';
+      position: absolute;
+      top: -100%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 20px,
+        rgba(0, 255, 247, 0.1) 20px,
+        rgba(0, 255, 247, 0.1) 40px
+      );
+      animation: matrixRain 20s linear infinite;
+    }
+    
+    @keyframes matrixRain {
+      0% { transform: translateY(-100%); }
+      100% { transform: translateY(100vh); }
+    }
+    .avatar {
+      margin-top: 2.5rem;
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      border: 4px solid #ff00c8;
+      box-shadow: 
+        0 0 40px #00fff7, 
+        0 0 80px #ff00c8 inset,
+        0 0 120px rgba(255, 0, 200, 0.3),
+        inset 0 0 20px rgba(0, 255, 247, 0.2);
+      object-fit: cover;
+      background: #18182a;
+      display: block;
+      position: relative;
+      z-index: 10;
+      animation: avatarGlow 3s ease-in-out infinite alternate;
+    }
+    
+    @keyframes avatarGlow {
+      0% { 
+        box-shadow: 
+          0 0 40px #00fff7, 
+          0 0 80px #ff00c8 inset,
+          0 0 120px rgba(255, 0, 200, 0.3),
+          inset 0 0 20px rgba(0, 255, 247, 0.2);
+      }
+      100% { 
+        box-shadow: 
+          0 0 60px #00fff7, 
+          0 0 100px #ff00c8 inset,
+          0 0 140px rgba(255, 0, 200, 0.5),
+          inset 0 0 30px rgba(0, 255, 247, 0.4);
+      }
+    }
+    .retro-box {
+      border: 3px solid #00fff7;
+      box-shadow: 
+        0 0 20px #00fff7, 
+        0 0 40px #222 inset,
+        0 0 60px rgba(0, 255, 247, 0.2),
+        inset 0 0 20px rgba(0, 255, 247, 0.1);
+      background: 
+        linear-gradient(135deg, rgba(34, 0, 51, 0.95) 0%, rgba(45, 0, 77, 0.95) 100%),
+        repeating-linear-gradient(
+          45deg,
+          transparent,
+          transparent 10px,
+          rgba(0, 255, 247, 0.05) 10px,
+          rgba(0, 255, 247, 0.05) 20px
+        );
+      padding: 2rem 3rem;
+      border-radius: 16px;
+      text-align: center;
+      margin: 2rem 0 2rem 0;
+      max-width: 480px;
+      position: relative;
+      z-index: 10;
+      backdrop-filter: blur(10px);
+      animation: boxPulse 4s ease-in-out infinite;
+    }
+    
+    @keyframes boxPulse {
+      0%, 100% { 
+        box-shadow: 
+          0 0 20px #00fff7, 
+          0 0 40px #222 inset,
+          0 0 60px rgba(0, 255, 247, 0.2),
+          inset 0 0 20px rgba(0, 255, 247, 0.1);
+      }
+      50% { 
+        box-shadow: 
+          0 0 30px #00fff7, 
+          0 0 50px #222 inset,
+          0 0 80px rgba(0, 255, 247, 0.3),
+          inset 0 0 30px rgba(0, 255, 247, 0.2);
+      }
+    }
+    h1 {
+      font-size: 2.3rem;
+      margin-bottom: 0.5rem;
+      letter-spacing: 2px;
+      color: #ff00c8;
+      text-shadow: 
+        0 0 8px #00fff7,
+        0 0 16px #ff00c8,
+        0 0 24px rgba(255, 0, 200, 0.5);
+      animation: textGlow 2s ease-in-out infinite alternate;
+      position: relative;
+      z-index: 10;
+    }
+    
+    @keyframes textGlow {
+      0% { 
+        text-shadow: 
+          0 0 8px #00fff7,
+          0 0 16px #ff00c8,
+          0 0 24px rgba(255, 0, 200, 0.5);
+      }
+      100% { 
+        text-shadow: 
+          0 0 12px #00fff7,
+          0 0 24px #ff00c8,
+          0 0 36px rgba(255, 0, 200, 0.8);
+      }
+    }
+    h2 {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 0 0 4px #00fff7;
+    }
+    .links {
+      margin: 1.5rem 0 2rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+    .links a {
+      color: #00fff7;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1rem;
+      border-bottom: 1px dashed #ff00c8;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+      padding: 0.3rem 0;
+      min-height: 44px; /* Touch target size */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .links a:hover,
+    .links a:active {
+      color: #ff00c8;
+      transform: scale(1.05);
+    }
+    .gifs {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin: 2rem 0 1rem 0;
+      flex-wrap: wrap;
+    }
+    .gifs img {
+      max-width: 120px;
+      border-radius: 10px;
+      box-shadow: 
+        0 0 12px #00fff7,
+        0 0 24px rgba(0, 255, 247, 0.3),
+        inset 0 0 8px rgba(0, 255, 247, 0.2);
+      background: #18182a;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      z-index: 10;
+      filter: contrast(1.1) brightness(1.05);
+    }
+    .gifs img:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 
+        0 0 20px #ff00c8,
+        0 0 40px rgba(255, 0, 200, 0.5),
+        inset 0 0 12px rgba(255, 0, 200, 0.3);
+      filter: contrast(1.2) brightness(1.1) hue-rotate(5deg);
+    }
+    .repos {
+      margin: 2.5rem 0 1.5rem 0;
+      max-width: 600px;
+      background: 
+        linear-gradient(135deg, rgba(34, 0, 51, 0.9) 0%, rgba(45, 0, 77, 0.9) 100%),
+        repeating-linear-gradient(
+          -45deg,
+          transparent,
+          transparent 15px,
+          rgba(255, 0, 200, 0.03) 15px,
+          rgba(255, 0, 200, 0.03) 30px
+        );
+      border: 2px solid #ff00c8;
+      border-radius: 14px;
+      box-shadow: 
+        0 0 16px #ff00c8,
+        0 0 32px rgba(255, 0, 200, 0.3),
+        inset 0 0 20px rgba(255, 0, 200, 0.1);
+      padding: 1.5rem 2rem;
+      position: relative;
+      z-index: 10;
+      backdrop-filter: blur(8px);
+      animation: reposGlow 5s ease-in-out infinite;
+    }
+    
+    @keyframes reposGlow {
+      0%, 100% { 
+        box-shadow: 
+          0 0 16px #ff00c8,
+          0 0 32px rgba(255, 0, 200, 0.3),
+          inset 0 0 20px rgba(255, 0, 200, 0.1);
+      }
+      50% { 
+        box-shadow: 
+          0 0 24px #ff00c8,
+          0 0 48px rgba(255, 0, 200, 0.5),
+          inset 0 0 30px rgba(255, 0, 200, 0.2);
+      }
+    }
+    .repos h3 {
+      color: #00fff7;
+      margin-bottom: 1.2rem;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+    }
+    .repo-item {
+      margin-bottom: 1.2rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed #00fff7;
+    }
+    .repo-item:last-child {
+      border-bottom: none;
+    }
+    .repo-title {
+      color: #ff00c8;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-shadow: 
+        0 0 4px #00fff7,
+        0 0 8px rgba(255, 0, 200, 0.5);
+      position: relative;
+      z-index: 10;
+      animation: glitch 3s infinite;
+    }
+    
+    @keyframes glitch {
+      0%, 100% { transform: translate(0); }
+      20% { transform: translate(-2px, 2px); }
+      40% { transform: translate(-2px, -2px); }
+      60% { transform: translate(2px, 2px); }
+      80% { transform: translate(2px, -2px); }
+    }
+    .repo-desc {
+      color: #fff;
+      font-size: 1rem;
+      margin: 0.2rem 0 0.4rem 0;
+    }
+    .repo-link {
+      color: #00fff7;
+      font-size: 0.98rem;
+      text-decoration: underline;
+      transition: color 0.2s, transform 0.2s;
+      display: inline-block;
+      padding: 0.2rem 0;
+      min-height: 32px;
+    }
+    .repo-link:hover,
+    .repo-link:active {
+      color: #ff00c8;
+      transform: scale(1.02);
+    }
+    .footer {
+      margin: 2.5rem 0 1rem 0;
+      color: #00fff7;
+      font-size: 1rem;
+      opacity: 0.7;
+      letter-spacing: 2px;
+      text-align: center;
+    }
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .avatar {
+        width: 140px;
+        height: 140px;
+        margin-top: 1.5rem;
+      }
+      
+      .retro-box {
+        padding: 1.5rem 1rem;
+        max-width: 95vw;
+        margin: 1rem 0;
+      }
+      
+      h1 {
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+      }
+      
+      h2 {
+        font-size: 1rem;
+      }
+      
+      .links a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+      }
+      
+      .gifs {
+        gap: 1rem;
+        margin: 1.5rem 0;
+      }
+      
+      .gifs img {
+        max-width: 70px;
+      }
+      
+      .repos {
+        padding: 1rem;
+        max-width: 95vw;
+        margin: 1.5rem 0;
+      }
+      
+      .repos h3 {
+        font-size: 1.1rem;
+      }
+      
+      .repo-title {
+        font-size: 1rem;
+      }
+      
+      .repo-desc {
+        font-size: 0.9rem;
+        line-height: 1.4;
+      }
+      
+      .footer {
+        font-size: 0.9rem;
+        margin: 1.5rem 0;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .avatar {
+        width: 120px;
+        height: 120px;
+        margin-top: 1rem;
+      }
+      
+      .retro-box {
+        padding: 1rem 0.8rem;
+        max-width: 98vw;
+      }
+      
+      h1 {
+        font-size: 1.5rem;
+      }
+      
+      h2 {
+        font-size: 0.9rem;
+      }
+      
+      .links {
+        gap: 0.5rem;
+      }
+      
+      .links a {
+        font-size: 0.9rem;
+      }
+      
+      .gifs {
+        gap: 0.8rem;
+      }
+      
+      .gifs img {
+        max-width: 60px;
+      }
+      
+      .repos {
+        padding: 0.8rem;
+      }
+      
+      .repo-title {
+        font-size: 0.95rem;
+      }
+      
+      .repo-desc {
+        font-size: 0.85rem;
+      }
+      
+      .repo-link {
+        font-size: 0.9rem;
+      }
+    }
+    
+    @media (max-width: 360px) {
+      .avatar {
+        width: 100px;
+        height: 100px;
+      }
+      
+      .retro-box {
+        padding: 0.8rem 0.6rem;
+      }
+      
+      h1 {
+        font-size: 1.3rem;
+      }
+      
+      h2 {
+        font-size: 0.8rem;
+      }
+      
+      .gifs img {
+        max-width: 50px;
+      }
+      
+      .repos {
+        padding: 0.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="matrix-bg"></div>
+  <img src="https://iili.io/FEr0Dvf.png" alt="Avatar" class="avatar">
+  <div class="retro-box">
+    <h1>Pablo Murad</h1>
+    <h2>Cybersecurity & Finance Specialist</h2>
+    <div class="links">
+      <a href="https://pablo.space" target="_blank">🌐 Website</a>
+      <a href="https://instagram.com/murad.pablo" target="_blank">📸 Instagram</a>
+      <a href="https://www.linkedin.com/in/pablomurad/" target="_blank">💼 LinkedIn</a>
+      <a href="mailto:runawaydev1l@pm.me">✉️ runawaydev1l@pm.me</a>
+    </div>
+    <div class="gifs">
+      <img src="https://iili.io/FErGT7a.gif" alt="Gif 1">
+      <img src="https://iili.io/FErMJCN.gif" alt="Gif 2">
+      <img src="https://iili.io/FErMml9.gif" alt="Gif 3">
+    </div>
+  </div>
+  <div class="repos">
+    <h3>Highlighted Public Repositories</h3>
+    <div class="repo-item">
+      <div class="repo-title">PrivateChess</div>
+      <div class="repo-desc">An anonymous, secure, and privacy-focused online chess game for two players. Real-time, anti-cheat, multilingual, and mobile-first. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/privatechess" target="_blank">View on GitHub</a>
+    </div>
+    <div class="repo-item">
+      <div class="repo-title">Sudoku</div>
+      <div class="repo-desc">A web-based Sudoku game. Play, solve, and challenge yourself online. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/sudoku" target="_blank">View on GitHub</a>
+    </div>
+    <div class="repo-item">
+      <div class="repo-title">dsize (dzip)</div>
+      <div class="repo-desc">Online file compressor and decompressor. Simple, fast, and privacy-friendly. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/dsize" target="_blank">View on GitHub</a>
+    </div>
+    <div class="repo-item">
+      <div class="repo-title">CloneWeb</div>
+      <div class="repo-desc">Highly optimized website cloner. Clone any website and download all files (HTML, CSS, JS, images, fonts) as a ZIP archive. Features YouTube, Reddit, and Pinterest downloaders. <br> <strong>Languages:</strong> JavaScript, EJS, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/cloneweb.online" target="_blank">View on GitHub</a>
+    </div>
+  </div>
+  <div class="footer">&copy; 2025 Pablo Murad (RunawayDevil) • All rights reserved • Updated</div>
+  
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  
+  <!-- GitHub Pages Analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+</body>
+</html> 
