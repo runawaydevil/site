@@ -6,6 +6,12 @@ on:
   pull_request:
     branches: [ main ]
 
+# Add permissions
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
 jobs:
   test-and-deploy:
     runs-on: ubuntu-latest
@@ -44,4 +50,5 @@ jobs:
       if: github.ref == 'refs/heads/main'
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ 
+        publish_dir: ./
+        force_orphan: true 
