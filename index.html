@@ -1,10 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pablo Murad - RunawayDevil</title>
+  
+  <!-- SEO Meta Tags -->
+  <title>Pablo Murad - Cybersecurity & Finance Specialist | RunawayDevil</title>
+  <meta name="description" content="Pablo Murad - Especialista em Cybersecurity e Finanças. Desenvolvedor de projetos como PrivateChess, Sudoku e dsize. Portfolio profissional.">
+  <meta name="keywords" content="cybersecurity, finance, developer, pablo murad, runawaydevil, chess, sudoku, file compression">
+  <meta name="author" content="Pablo Murad">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://runawaydevil.github.io/">
+  <meta property="og:title" content="Pablo Murad - Cybersecurity & Finance Specialist">
+  <meta property="og:description" content="Especialista em Cybersecurity e Finanças. Desenvolvedor de projetos inovadores.">
+  <meta property="og:image" content="https://iili.io/FEr0Dvf.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://runawaydevil.github.io/">
+  <meta property="twitter:title" content="Pablo Murad - Cybersecurity & Finance Specialist">
+  <meta property="twitter:description" content="Especialista em Cybersecurity e Finanças. Desenvolvedor de projetos inovadores.">
+  <meta property="twitter:image" content="https://iili.io/FEr0Dvf.png">
+  
+  <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Ctext y='58' font-size='60'%3E%F0%9F%92%80%3C/text%3E%3C/svg%3E">
+  <link rel="apple-touch-icon" href="public/favicon.png">
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="https://iili.io/FEr0Dvf.png" as="image">
+  
   <style>
     body {
       background: linear-gradient(135deg, #18182a 0%, #2d004d 100%);
@@ -82,6 +108,11 @@
       border-radius: 10px;
       box-shadow: 0 0 12px #00fff7;
       background: #18182a;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .gifs img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px #ff00c8;
     }
     .repos {
       margin: 2.5rem 0 1.5rem 0;
@@ -178,7 +209,25 @@
       <div class="repo-desc">Online file compressor and decompressor. Simple, fast, and privacy-friendly. <br> <strong>Languages:</strong> JavaScript, HTML, CSS</div>
       <a class="repo-link" href="https://github.com/runawaydevil/dsize" target="_blank">View on GitHub</a>
     </div>
+    <div class="repo-item">
+      <div class="repo-title">CloneWeb</div>
+      <div class="repo-desc">Highly optimized website cloner. Clone any website and download all files (HTML, CSS, JS, images, fonts) as a ZIP archive. Features YouTube, Reddit, and Pinterest downloaders. <br> <strong>Languages:</strong> JavaScript, EJS, CSS</div>
+      <a class="repo-link" href="https://github.com/runawaydevil/cloneweb.online" target="_blank">View on GitHub</a>
+    </div>
   </div>
   <div class="footer">&copy; 2025 Pablo Murad (RunawayDevil) • All rights reserved</div>
+  
+  <!-- Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+  
+  <!-- GitHub Pages Analytics -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
 </body>
 </html> 

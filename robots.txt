@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://runawaydevil.github.io/sitemap.xml
+
+# Allow all crawlers
+Crawl-delay: 1 
